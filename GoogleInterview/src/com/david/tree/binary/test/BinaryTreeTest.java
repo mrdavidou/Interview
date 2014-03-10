@@ -15,20 +15,18 @@ import org.junit.Test;
 
 import com.david.annotation.MetaInfo;
 import com.david.tree.binary.BinaryNode;
-import com.david.tree.binary.BinaryTree;
+import com.david.tree.binary.BinarySearchTree;
 import com.david.tree.binary.util.BinaryTreeUtil;
 
 public class BinaryTreeTest {
 	BinaryTreeUtil<Integer> mTreeUtil;
-	BinaryTree<Integer> mTree;
+	BinarySearchTree<Integer> mTree;
 	List<List<BinaryNode<Integer>>> mExpected;
 	
-	@SuppressWarnings("unchecked")
 	@Before
 	public void setUp() {
-		logAnnotations();
 		mTreeUtil = new BinaryTreeUtil<Integer>();
-		mTree = new BinaryTree<Integer>();
+		mTree = new BinarySearchTree<Integer>();
 		mTree.insert(5);
 		mTree.insert(2);
 		mTree.insert(7);
