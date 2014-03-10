@@ -1,7 +1,7 @@
 package com.david.tree;
 
 /**
- * Interface Tree defines the operations that all implementations support
+ * Interface Tree defines the operations that all tree implementations support
  * 
  * ******************PUBLIC OPERATIONS*********************
  *
@@ -21,32 +21,32 @@ public interface Tree<T extends Comparable<T>> {
      * Insert into the tree; duplicates are ignored.
      * @param x the item to insert.
      */
-    public void insert(Comparable<T> x);
+    public void insert(T x);
     
     /**
      * Remove from the tree. Nothing is done if x is not found.
      * @param x the item to remove.
      */
-    public void remove(Comparable<T> x);
+    public void remove(T x);
     
     /**
      * Find the smallest item in the tree.
      * @return smallest item or null if empty.
      */
-    public Comparable<T> findMin();
+    public T findMin();
     
     /**
      * Find the largest item in the tree.
      * @return the largest item of null if empty.
      */
-    public Comparable<T> findMax();
+    public T findMax();
     
     /**
      * Find an item in the tree.
      * @param x the item to search for.
      * @return the matching item or null if not found.
      */
-    public Comparable<T> find(Comparable<T> x);
+    public T find(T x);
     
     /**
      * Make the tree logically empty.
